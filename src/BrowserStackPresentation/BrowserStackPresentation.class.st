@@ -16,8 +16,8 @@ BrowserStackPresentation >> create [
 						path: Path * 'BrowserStackPresentation' / 'ressources' / 'pharo.png'));
 		addSlide:
 			(GtTextSlide new
-				newTextWithFormat: (self heading: 'Pure and elegent Object Oriented language');
-				newTextWithFormat: (self heading: 'Full written in itself');
+				newTextWithFormat: (self heading: 'Pure and elegant Object Oriented Language');
+				newTextWithFormat: (self heading: 'Fully written in itself');
 				newTextWithFormat: (self heading: 'Empowering'));
 		addSlide:
 			(GtTextAndElementSlide new
