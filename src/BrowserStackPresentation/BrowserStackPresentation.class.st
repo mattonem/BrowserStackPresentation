@@ -12,7 +12,7 @@ BrowserStackPresentation >> create [
 		addSlide: (GtFilePictureSlide new
 				fileReference:
 					(GtResourceReference
-						path: Path * 'feenkcom' / 'gtoolkit' / 'doc' / 'gtoolkit.png'));
+						path: Path * 'BrowserStackPresentation' / 'ressources' / 'pharo.png'));
 		addSlide:
 			(GtTextAndElementSlide new
 				newTextWithFormat: (self heading: 'Pure and elegent Object Oriented language');
