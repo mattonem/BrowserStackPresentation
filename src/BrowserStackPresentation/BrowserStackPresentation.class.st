@@ -27,39 +27,41 @@ BrowserStackPresentation >> create [
 				newTextWithFormat: (self subtitle: 'Empowering'));
 		addSlide:
 			(GtTextAndElementSlide new
+				newTextWithFormat: (self heading: 'The full syntax on a postcard');
+				element: [ self methodCoderForMethods: {(Object >> #exampleWihtNumber:)} ]);
+		addSlide:
+			(GtTextAndElementSlide new
+				newTextWithFormat: (self heading: 'The full syntax on a postcard');
+				newTextWithFormat: (self subtitle: 'Objects');
+				newTextWithFormat: (self subtitle: 'Messages');
+				newTextWithFormat: (self subtitle: 'Closures (Blocks)');
+				element: [ self methodCoderForMethods: {(Object >> #exampleWihtNumber:)} ]);
+		addSlide:
+			(GtTextAndElementSlide new
 				newTextWithFormat: (self heading: 'Everything is an Object');
 				element: [ GtPlaygroundSlide new
 						snippets:
 							{'3 + 4' . 'true not' . 'Date today' . '(ZnEasy getPng: ''https://pbs.twimg.com/profile_images/451968255846928384/0pyDMTyp_400x400.png'') asMorph'};
 						asElement ]);
 		addSlide:
-			(GtTextAndElementSlide new
-				newTextWithFormat: (self heading: 'The full syntax on a postcard');
-				element: [ self methodCoderForMethods: {(Object >> #exampleWihtNumber:)} ]);
-		addSlide:
 			(GtTextSlide new
-				newTextWithFormat: (self heading: 'Objects');
 				newTextWithFormat: (self heading: 'Messages');
-				newTextWithFormat: (self heading: 'Closures (Blocks)'));
-		addSlide:
-			(GtLabelAndElementSlide new
-				newTextWithFormat: (self heading: 'Objects');
-				element: [ GtPlaygroundSlide new
-						snippets: {'1' . 'false' . 'Date' . 'Float'};
-						asElement ]);
+				newTextWithFormat: (self subtitle: 'Unary message');
+				newTextWithFormat: (self subtitle: 'Binary message');
+				newTextWithFormat: (self subtitle: 'Keyword message'));
 		addSlide:
 			(GtLabelAndElementSlide new
 				newTextWithFormat: (self heading: 'Messages');
 				newTextWithFormat: (self subtitle: 'Unary message');
 				element: [ GtPlaygroundSlide new
-						snippets: {'1 class' . 'false not' . 'Date today' . 'Float pi'};
+						snippets: {'1 class' . 'Color lightGreen'};
 						asElement ]);
 		addSlide:
 			(GtLabelAndElementSlide new
 				newTextWithFormat: (self heading: 'Messages');
 				newTextWithFormat: (self subtitle: 'Binary message');
 				element: [ GtPlaygroundSlide new
-						snippets: {'1 + 2' . '3 @ 4'};
+						snippets: {'1 / 3' . 'Date today -> ''sunny'''};
 						asElement ]);
 		addSlide:
 			(GtLabelAndElementSlide new
@@ -75,10 +77,10 @@ BrowserStackPresentation >> create [
 						snippets: {'(1 to: 5) collect: [:i | i factorial ]'};
 						asElement ]);
 		addSlide: self youGotItSlide;
-		addSlide: (GtTextSlide new newTextWithFormat: (self heading: 'Wait but...'));
+		addSlide: (GtTextSlide new newTextWithFormat: (self heading: '?!'));
 		addSlide:
 			(GtTextSlide new
-				newTextWithFormat: (self heading: 'Wait but...');
+				newTextWithFormat: (self heading: 'What about...');
 				newTextWithFormat: (self subtitle: 'if () then {}');
 				newTextWithFormat: (self subtitle: 'class definitions');
 				newTextWithFormat: (self subtitle: 'iterators'));
