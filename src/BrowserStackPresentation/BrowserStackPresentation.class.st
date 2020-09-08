@@ -4,6 +4,12 @@ Class {
 	#category : #BrowserStackPresentation
 }
 
+{ #category : #examples }
+BrowserStackPresentation class >> start [ 
+	<example>
+ 	self new openInSpace
+]
+
 { #category : #'api - instantiation' }
 BrowserStackPresentation >> create [
 	| show |
@@ -28,47 +34,27 @@ BrowserStackPresentation >> create [
 		addSlide:
 			(GtTextAndElementSlide new
 				newTextWithFormat: (self heading: 'The full syntax on a postcard');
-				element: [ self methodCoderForMethods: {(Object >> #exampleWihtNumber:)} ]);
+				element: [ self
+						methodCoderForMethods: {(GtPharoMethodExample >> #exampleWithNumber:)} ]);
 		addSlide:
 			(GtTextAndElementSlide new
 				newTextWithFormat: (self heading: 'The full syntax on a postcard');
 				newTextWithFormat: (self subtitle: 'Objects');
 				newTextWithFormat: (self subtitle: 'Messages');
 				newTextWithFormat: (self subtitle: 'Closures (Blocks)');
-				element: [ self methodCoderForMethods: {(GtPharoMethodExample >> #exampleWihtNumber:)} ]);
-		addSlide:
-			(GtTextAndElementSlide new
-				newTextWithFormat: (self heading: 'Everything is an Object');
-				element: [ GtPlaygroundSlide new
-						snippets:
-							{'3 + 4' . 'true not' . 'Date today' . '(ZnEasy getPng: ''https://pbs.twimg.com/profile_images/451968255846928384/0pyDMTyp_400x400.png'') asMorph'};
-						asElement ]);
-		addSlide:
-			(GtTextSlide new
-				newTextWithFormat: (self heading: 'Messages');
-				newTextWithFormat: (self subtitle: 'Unary message');
-				newTextWithFormat: (self subtitle: 'Binary message');
-				newTextWithFormat: (self subtitle: 'Keyword message'));
+				element: [ self
+						methodCoderForMethods: {(GtPharoMethodExample >> #exampleWithNumber:)} ]);
 		addSlide:
 			(GtLabelAndElementSlide new
-				newTextWithFormat: (self heading: 'Messages');
-				newTextWithFormat: (self subtitle: 'Unary message');
+				newTextWithFormat: (self heading: 'It all starts with an Object');
 				element: [ GtPlaygroundSlide new
-						snippets: {'1 class' . 'Color lightGreen'};
+						snippets: {'true' . '21' . 'Mike'};
 						asElement ]);
 		addSlide:
 			(GtLabelAndElementSlide new
-				newTextWithFormat: (self heading: 'Messages');
-				newTextWithFormat: (self subtitle: 'Binary message');
+				newTextWithFormat: (self heading: 'We send it messages');
 				element: [ GtPlaygroundSlide new
-						snippets: {'1 / 3' . 'Date today -> ''sunny'''};
-						asElement ]);
-		addSlide:
-			(GtLabelAndElementSlide new
-				newTextWithFormat: (self heading: 'Messages');
-				newTextWithFormat: (self subtitle: 'Keyword message');
-				element: [ GtPlaygroundSlide new
-						snippets: {'2 between: 10 and: 20'};
+						snippets: {'true not' . '21 * 2 ' . 'Mike playsDnDWith: Will and: Lucas'};
 						asElement ]);
 		addSlide:
 			(GtLabelAndElementSlide new
@@ -77,7 +63,6 @@ BrowserStackPresentation >> create [
 						snippets: {'(1 to: 5) collect: [:i | i factorial ]'};
 						asElement ]);
 		addSlide: self youGotItSlide;
-		addSlide: (GtTextSlide new newTextWithFormat: (self heading: '?!'));
 		addSlide:
 			(GtTextSlide new
 				newTextWithFormat: (self heading: 'What about...');
@@ -112,7 +97,8 @@ BrowserStackPresentation >> create [
 		addSlide:
 			(GtLabelAndElementSlide new
 				newTextWithFormat: (self heading: 'Thank you !');
-				element: [ self methodCoderForMethods: {(Object >> #exampleWihtNumber:)} ]);
+				element: [ self
+						methodCoderForMethods: {(GtPharoMethodExample >> #exampleWithNumber:)} ]);
 		makeArrowsVisible.
 	^ show
 ]
