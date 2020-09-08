@@ -35,7 +35,7 @@ BrowserStackPresentation >> create [
 				newTextWithFormat: (self subtitle: 'Objects');
 				newTextWithFormat: (self subtitle: 'Messages');
 				newTextWithFormat: (self subtitle: 'Closures (Blocks)');
-				element: [ self methodCoderForMethods: {(Object >> #exampleWihtNumber:)} ]);
+				element: [ self methodCoderForMethods: {(GtPharoMethodExample >> #exampleWihtNumber:)} ]);
 		addSlide:
 			(GtTextAndElementSlide new
 				newTextWithFormat: (self heading: 'Everything is an Object');
