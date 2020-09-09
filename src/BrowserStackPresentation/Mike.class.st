@@ -7,5 +7,5 @@ Class {
 { #category : #accessing }
 Mike class >> playsDnDWith: anObject and: anObject1 [
 	^ (GtResourceReference
-		path: Path * 'BrowserStackPresentation' / 'ressources' / 'demo.jpg') fileReference
+		path: Path * 'mattonem' / 'BrowserStackPresentation' / 'ressources' / 'demo.jpg') fileReference
 ]

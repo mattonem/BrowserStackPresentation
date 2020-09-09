@@ -19,7 +19,7 @@ BrowserStackPresentation >> create [
 			(GtFilePictureSlide new
 				fileReference:
 					(GtResourceReference
-						path: Path * 'BrowserStackPresentation' / 'ressources' / 'pharo.png'));
+						path: Path * 'mattonem'/'BrowserStackPresentation' / 'ressources' / 'pharo.png'));
 		addSlide:
 			(GtTextSlide new
 				newTextWithFormat: (self heading: 'Presentation of the Pharo');
